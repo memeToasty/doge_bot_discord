@@ -20,5 +20,10 @@
   "bugs": {
     "url": "https://github.com/memeToasty/doge_bot_discord/issues"
   },
-  "homepage": "https://github.com/memeToasty/doge_bot_discord#readme"
+  "homepage": "https://github.com/memeToasty/doge_bot_discord#readme",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dogeify-js": "^1.2.1",
+    "lorem-ipsum": "^2.0.3"
+  }
 }
