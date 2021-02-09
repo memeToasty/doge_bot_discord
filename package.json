@@ -1,0 +1,24 @@
+{
+  "name": "doge_bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/memeToasty/doge_bot_discord.git"
+  },
+  "keywords": [
+    "doge",
+    "discord",
+    "bot"
+  ],
+  "author": "memeToasty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/memeToasty/doge_bot_discord/issues"
+  },
+  "homepage": "https://github.com/memeToasty/doge_bot_discord#readme"
+}
