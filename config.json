@@ -1,0 +1,6 @@
+{
+    "token" : "token",
+    "statusUpdateTimer": 60000,
+    "typeStatusRemoveTime" : 2500,
+    "petStatusRemoveTime" : 2500
+}
