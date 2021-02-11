@@ -2,4 +2,3 @@
 such love. wow. such life. wow.
 
 ## ToDo
-- TradingTips
