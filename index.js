@@ -4,6 +4,9 @@ const dogeify = require('dogeify-js');
 const Discord = require('discord.js');
 const { prototype } = require('dogeify-js/src/dogeify');
 const client = new Discord.Client();
+const fetch = require('node-fetch');
+
+const url =  "https://api.coingecko.com/api/v3/simple/price?ids=Dogecoin&vs_currencies=eur";
 
 function removeMessageAfter (msg, time) {
   if (!(msg.channel instanceof Discord.DMChannel)) {
@@ -25,6 +28,7 @@ client.on('message', async (msg) => {
     const arg = msg.cleanContent.substring(mention.concat(cmd + ' ').length).trim();
     if (cmd == 'dogeify') {
       msg.channel.send(await dogeify(arg));
+      removeMessageAfter(msg, 0);
     } else if (cmd == 'pet') {
 
       msg.channel.send('', {files: [
@@ -33,6 +37,10 @@ client.on('message', async (msg) => {
         removeMessageAfter(msg, config.petStatusRemoveTime);
       });
       removeMessageAfter(msg, config.petStatusRemoveTime);
+    } else if (cmd == 'price') {
+      fetch(url).then(res => res.json()).then((json) => {
+        msg.channel.send('many price: ' + json.dogecoin.eur + '€');
+      });
     }
   }
 });
