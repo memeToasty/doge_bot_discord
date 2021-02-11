@@ -41,6 +41,8 @@ client.on('message', async (msg) => {
       fetch(url).then(res => res.json()).then((json) => {
         msg.channel.send('many price: ' + json.dogecoin.eur + '€');
       });
+    } else if (cmd == 'tip') {
+      msg.channel.send('hodl');
     }
   }
 });
